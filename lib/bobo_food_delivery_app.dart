@@ -11,7 +11,6 @@ class BoboFoodDeliveryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      //* The size of the screen of figma design.
       designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
