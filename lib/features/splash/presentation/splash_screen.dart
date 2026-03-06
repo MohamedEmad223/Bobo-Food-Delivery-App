@@ -26,27 +26,25 @@ class _SplashScreenState extends State<SplashScreen>
       duration: const Duration(seconds: 3),
     );
 
-    /// Background animation (start immediately)
-    backgroundScale = Tween<double>(
-      begin: 1.3,
-      end: 1,
-    ).animate(
-      CurvedAnimation(parent: controller, curve: const Interval(0.0, 0.5, curve: Curves.easeOut)),
+    backgroundScale = Tween<double>(begin: 1.3, end: 1).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: const Interval(0.0, 0.5, curve: Curves.easeOut),
+      ),
     );
 
-    /// Logo animation (start later)
-    logoFade = Tween<double>(
-      begin: 0,
-      end: 1,
-    ).animate(
-      CurvedAnimation(parent: controller, curve: const Interval(0.5, 0.9, curve: Curves.easeIn)),
+    logoFade = Tween<double>(begin: 0, end: 1).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: const Interval(0.5, 0.9, curve: Curves.easeIn),
+      ),
     );
 
-    logoScale = Tween<double>(
-      begin: 0.8,
-      end: 1,
-    ).animate(
-      CurvedAnimation(parent: controller, curve: const Interval(0.5, 0.9, curve: Curves.easeOutBack)),
+    logoScale = Tween<double>(begin: 0.8, end: 1).animate(
+      CurvedAnimation(
+        parent: controller,
+        curve: const Interval(0.5, 0.9, curve: Curves.easeOutBack),
+      ),
     );
 
     controller.forward();
@@ -64,6 +62,8 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Scaffold(
       body: Stack(
         fit: StackFit.expand,
@@ -71,7 +71,7 @@ class _SplashScreenState extends State<SplashScreen>
           ScaleTransition(
             scale: backgroundScale,
             child: Image.asset(
-              AssetsHelper.splash,
+              isDark ? AssetsHelper.splashDark : AssetsHelper.splash,
               fit: BoxFit.cover,
             ),
           ),
@@ -81,7 +81,9 @@ class _SplashScreenState extends State<SplashScreen>
               child: ScaleTransition(
                 scale: logoScale,
                 child: Image.asset(
-                  AssetsHelper.logoSplashScreenImage,
+                  isDark
+                      ? AssetsHelper.logoSplashScreenImage
+                      : AssetsHelper.logoSplashScreenImage,
                   width: 180,
                 ),
               ),
