@@ -1,6 +1,7 @@
 import 'package:bobo_food_delivery_app/config/routing/routes.dart';
-import 'package:bobo_food_delivery_app/features/auth/login.dart';
+import 'package:bobo_food_delivery_app/features/on_boarding/presentation/screens/on_boarding_screen.dart';
 import 'package:bobo_food_delivery_app/features/splash/presentation/splash_screen.dart';
+import 'package:bobo_food_delivery_app/features/home/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class AppRouter {
@@ -8,8 +9,10 @@ class AppRouter {
     switch (settings.name) {
       case Routes.splashScreen:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
-      case Routes.loginScreen:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case Routes.onBoardingScreen:
+        return MaterialPageRoute(builder: (_) => const OnboardingScreen());
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return null;
     }

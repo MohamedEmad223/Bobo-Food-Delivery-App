@@ -11,4 +11,8 @@ class AssetsHelper {
       'assets/images/splash/Pattern.png';
   static const String backGroundPatternImageSplashScreenImageDark =
       'assets/images/splash/pattern_dark.png';
+
+  static const String onBoardingOne = 'assets/images/onboarding/onboarding_one_light.png';
+  static const String onBoardingTwo = 'assets/images/onboarding/onboarding_two_light.png';
+  static const String onBoardingThree = 'assets/images/onboarding/onboarding_three_light.png';
 }
