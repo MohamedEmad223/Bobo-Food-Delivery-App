@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class BoboAppBar extends StatelessWidget implements PreferredSizeWidget {
-
   final bool showBackButton;
   final Widget? action;
   final VoidCallback? onBackTap;
@@ -22,18 +21,24 @@ class BoboAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-        final isDark = Theme.of(context).brightness == Brightness.dark;
-
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
     return AppBar(
-      backgroundColor: isDark?ColorHelper.mainDarkColor: Colors.white,
+      backgroundColor: isDark ? ColorHelper.mainDarkColor : Colors.white,
       elevation: 0,
       scrolledUnderElevation: 0,
       automaticallyImplyLeading: false,
       centerTitle: true,
-      title:isDark? SvgPicture.asset(AssetsHelper.chooseScreenLogoDark): SvgPicture.asset(AssetsHelper.chooseScreenLogo),
+      title: isDark
+          ? SvgPicture.asset(AssetsHelper.chooseScreenLogoDark)
+          : SvgPicture.asset(AssetsHelper.chooseScreenLogo),
       leading: showBackButton
-          ? BackButton(onPressed: onBackTap ?? () => Navigator.pop(context))
+          ? BackButton(
+              color: isDark
+                  ? ColorHelper.mainBackGroundColor
+                  : ColorHelper.darkColor,
+              onPressed: onBackTap ?? () => Navigator.pop(context),
+            )
           : SizedSpacer(hasAction: action != null),
       actions: [
         if (action != null)
