@@ -19,5 +19,6 @@ class ColorHelper {
 
   // Neutral colors
   static const Color gray200 = Color(0xFFD1D5DB);
+  static const Color grey = Color(0xFF70756B);
   static const Color white24 = Color(0x3DFFFFFF);
 }
