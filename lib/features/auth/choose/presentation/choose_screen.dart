@@ -1,3 +1,4 @@
+import 'package:bobo_food_delivery_app/core/widgets/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class ChooseScreen extends StatelessWidget {
@@ -5,6 +6,14 @@ class ChooseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      
+      appBar: const BoboAppBar(),
+      body: Column(
+        children:  [
+
+          ],
+      ),
+    );
   }
 }

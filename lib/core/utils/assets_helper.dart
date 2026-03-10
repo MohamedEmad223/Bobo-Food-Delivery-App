@@ -12,7 +12,12 @@ class AssetsHelper {
   static const String backGroundPatternImageSplashScreenImageDark =
       'assets/images/splash/pattern_dark.png';
 
-  static const String onBoardingOne = 'assets/images/onboarding/onboarding_one_light.png';
-  static const String onBoardingTwo = 'assets/images/onboarding/onboarding_two_light.png';
-  static const String onBoardingThree = 'assets/images/onboarding/onboarding_three_light.png';
+  static const String onBoardingOne =
+      'assets/images/onboarding/onboarding_one_light.png';
+  static const String onBoardingTwo =
+      'assets/images/onboarding/onboarding_two_light.png';
+  static const String onBoardingThree =
+      'assets/images/onboarding/onboarding_three_light.png';
+
+  static const String chooseScreen = 'assets/svgs/Bobo.svg';
 }
