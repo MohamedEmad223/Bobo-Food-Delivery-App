@@ -1,4 +1,5 @@
 import 'package:bobo_food_delivery_app/config/routing/routes.dart';
+import 'package:bobo_food_delivery_app/features/auth/choose/presentation/choose_screen.dart';
 import 'package:bobo_food_delivery_app/features/on_boarding/presentation/screens/on_boarding_screen.dart';
 import 'package:bobo_food_delivery_app/features/splash/presentation/splash_screen.dart';
 import 'package:bobo_food_delivery_app/features/home/presentation/screens/home_screen.dart';
@@ -13,6 +14,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const OnboardingScreen());
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case Routes.chooseScreen:
+        return MaterialPageRoute(builder: (_) => const ChooseScreen());
       default:
         return null;
     }
