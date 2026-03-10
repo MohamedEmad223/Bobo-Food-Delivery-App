@@ -19,5 +19,6 @@ class AssetsHelper {
   static const String onBoardingThree =
       'assets/images/onboarding/onboarding_three_light.png';
 
-  static const String chooseScreen = 'assets/svgs/Bobo.svg';
+  static const String chooseScreenLogo = 'assets/svgs/Bobo.svg';
+  static const String chooseScreen = 'assets/svgs/Burger - light mode.svg';
 }

@@ -27,6 +27,30 @@ class AppTextStyles {
     );
   }
 
+  static TextStyle chooseText(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return GoogleFonts.poppins(
+      fontSize: fontSizeXLarge,
+      fontWeight: fontWeightExtraBold,
+      color: isDark
+          ? ColorHelper.textPrimaryDark
+          : ColorHelper.textPrimaryLight,
+      height: 1.25,
+    );
+  }
+
+   static TextStyle orText(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return GoogleFonts.poppins(
+      fontSize: fontSizeMedium,
+      fontWeight: fontWeightBold,
+      color: isDark
+          ? ColorHelper.textPrimaryDark
+          : ColorHelper.textPrimaryLight,
+      height: 1.25,
+    );
+  }
+
   static TextStyle onboardingDescription(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return GoogleFonts.poppins(
