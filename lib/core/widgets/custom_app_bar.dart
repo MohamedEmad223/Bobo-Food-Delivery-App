@@ -34,7 +34,9 @@ class BoboAppBar extends StatelessWidget implements PreferredSizeWidget {
           : SvgPicture.asset(AssetsHelper.chooseScreenLogo),
       leading: showBackButton
           ? BackButton(
-              color: isDark ? ColorHelper.white24 : ColorHelper.darkColor,
+              color: isDark
+                  ? ColorHelper.mainBackGroundColor
+                  : ColorHelper.darkColor,
               onPressed: onBackTap ?? () => Navigator.pop(context),
             )
           : SizedSpacer(hasAction: action != null),

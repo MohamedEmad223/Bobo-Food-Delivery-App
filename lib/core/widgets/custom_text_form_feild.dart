@@ -1,4 +1,5 @@
 import 'package:bobo_food_delivery_app/core/theme/app_text_styles.dart';
+import 'package:bobo_food_delivery_app/core/theme/color_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,6 +30,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return TextFormField(
       controller: widget.controller,
       obscureText: widget.isPassword && _obscure,
@@ -44,7 +46,11 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         hintText: widget.hint,
         hintStyle: AppTextStyles.textForm(context),
         filled: true,
-        fillColor: _hasError ? const Color(0xFFFDECEC) : Colors.grey.shade100,
+        fillColor: _hasError
+            ? const Color(0xFFFDECEC)
+            : isDark
+            ? ColorHelper.mainDarkColor
+            : Colors.grey.shade100,
         contentPadding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 14.h),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.r),
@@ -54,7 +60,9 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.r),
-          borderSide: const BorderSide(color: Colors.transparent),
+          borderSide: BorderSide(
+            color: isDark ? ColorHelper.grey : ColorHelper.darkColor,
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15.r),

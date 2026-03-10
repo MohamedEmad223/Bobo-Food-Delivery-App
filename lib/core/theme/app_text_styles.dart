@@ -74,12 +74,12 @@ class AppTextStyles {
     );
   }
 
-   static TextStyle signUpText(BuildContext context) {
+  static TextStyle signUpText(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return GoogleFonts.poppins(
       fontSize: fontSizeSmall,
       fontWeight: fontWeightBold,
-      color: isDark ? ColorHelper.mainColor : ColorHelper.white24,
+      color: isDark ? ColorHelper.mainColor : ColorHelper.mainColor,
       height: 1.25,
     );
   }
@@ -89,12 +89,10 @@ class AppTextStyles {
     return GoogleFonts.poppins(
       fontSize: fontSizeXXLarge,
       fontWeight: fontWeightBold,
-      color: isDark ? ColorHelper.white24 : ColorHelper.darkColor,
+      color: isDark ? ColorHelper.mainBackGroundColor : ColorHelper.darkColor,
       height: 1.25,
     );
   }
-
-
 
   static TextStyle onboardingDescription(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;

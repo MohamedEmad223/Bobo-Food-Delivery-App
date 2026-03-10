@@ -1,3 +1,4 @@
+import 'package:bobo_food_delivery_app/core/theme/color_helper.dart';
 import 'package:bobo_food_delivery_app/core/widgets/custom_app_bar.dart';
 import 'package:bobo_food_delivery_app/core/widgets/custom_text_form_feild.dart';
 import 'package:bobo_food_delivery_app/features/auth/login/presentation/widgets/auth_button.dart';
@@ -52,8 +53,11 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: isDark
+          ? ColorHelper.mainDarkColor
+          : ColorHelper.mainBackGroundColor,
       appBar: BoboAppBar(showBackButton: true),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).unfocus(),
