@@ -23,7 +23,7 @@ class BoboFoodDeliveryApp extends StatelessWidget {
             theme: ThemeManager.getLightTheme(),
             darkTheme: ThemeManager.getDarkTheme(),
             onGenerateRoute: AppRouter().generateRoute,
-            initialRoute: Routes.chooseScreen,
+            initialRoute: Routes.loginScreen,
           ),
         ),
       ),

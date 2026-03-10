@@ -8,7 +8,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   // Configure GoogleFonts to use local fonts only (no internet fetch)
-  GoogleFonts.config.allowRuntimeFetching = false;
+  // GoogleFonts.config.allowRuntimeFetching = false;
 
   await configureDependencies();
   runApp(const BoboFoodDeliveryApp());
