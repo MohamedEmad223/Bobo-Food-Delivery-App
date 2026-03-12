@@ -28,7 +28,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 36.h),
-                LoginTitle(text: 'Log in to your\naccount'),
+                LoginTitle(text: 'Forgot your password?\nDon\'t worry '),
                 SizedBox(height: 40.h),
                 CustomTextFormField(
                   hint: 'email address',

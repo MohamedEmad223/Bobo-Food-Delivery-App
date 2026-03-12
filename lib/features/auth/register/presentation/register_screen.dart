@@ -97,6 +97,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   SizedBox(height: 20.h),
+                  LoginTitle(text: 'Create a new account'),
+
                   CustomTextFormField(
                     hint: 'Password',
                     controller: _passwordCtrl,
