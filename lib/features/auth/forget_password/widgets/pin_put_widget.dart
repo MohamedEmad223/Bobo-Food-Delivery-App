@@ -70,6 +70,7 @@ class _PinInputState extends State<PinInput> {
 
   @override
   Widget build(BuildContext context) {
+    
     final base = _base();
 
     final focusedTheme = base.copyWith(

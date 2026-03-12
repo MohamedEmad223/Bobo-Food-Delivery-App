@@ -4,6 +4,7 @@ import 'package:bobo_food_delivery_app/core/theme/app_text_styles.dart';
 import 'package:bobo_food_delivery_app/core/widgets/custom_app_bar.dart';
 import 'package:bobo_food_delivery_app/features/auth/forget_password/widgets/pin_put_widget.dart';
 import 'package:bobo_food_delivery_app/features/auth/forget_password/widgets/resend_timer.dart';
+import 'package:bobo_food_delivery_app/features/auth/login/presentation/widgets/auth_button.dart';
 import 'package:bobo_food_delivery_app/features/auth/login/presentation/widgets/login_title.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,6 +39,9 @@ class VerifyCodeScreen extends StatelessWidget {
                 initialSeconds: 30,
                 onResend: () => log('Code resent!'),
               ),
+              Spacer(),
+              AuthButton(onTap: () => log('Verify code!')),
+              SizedBox(height: 25.h),
             ],
           ),
         ),
