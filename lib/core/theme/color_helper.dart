@@ -23,4 +23,15 @@ class ColorHelper {
   static const Color grey = Color(0xFF70756B);
   static const Color white24 = Color(0x3DFFFFFF);
   static const Color grey400 = Color(0xFF60655C);
+
+  // pin put colors
+
+  static const defaultBorder = Color(0xFFD1D5DB);
+  static const submittedBg = Color(0xFFF5F3FF);
+  static const focusedBg = Color(0xFFFAFAFE);
+  static const disabledBg = Color(0xFFF3F4F6);
+  static const disabledBorder = Color(0xFFE5E7EB);
+
+  static const defaultTextColor = Color(0xFF111827);
+  static const disabledTextColor = Color(0xFF9CA3AF);
 }
