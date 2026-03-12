@@ -88,7 +88,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   SizedBox(height: 20.h),
-
                   CustomTextFormField(
                     hint: 'Email Address',
                     controller: _emailCtrl,
@@ -98,7 +97,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     },
                   ),
                   SizedBox(height: 20.h),
-
                   CustomTextFormField(
                     hint: 'Password',
                     controller: _passwordCtrl,
