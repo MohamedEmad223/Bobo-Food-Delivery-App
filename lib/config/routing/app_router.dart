@@ -1,6 +1,7 @@
 import 'package:bobo_food_delivery_app/config/routing/routes.dart';
 import 'package:bobo_food_delivery_app/features/auth/choose/presentation/choose_screen.dart';
 import 'package:bobo_food_delivery_app/features/auth/forget_password/presentation/forget_password_screen.dart';
+import 'package:bobo_food_delivery_app/features/auth/forget_password/presentation/reset_password_screen.dart';
 import 'package:bobo_food_delivery_app/features/auth/forget_password/presentation/verify_code_screen.dart';
 import 'package:bobo_food_delivery_app/features/auth/login/presentation/screens/login_screen.dart';
 import 'package:bobo_food_delivery_app/features/auth/register/presentation/register_screen.dart';
@@ -24,6 +25,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => ForgetPasswordScreen());
       case Routes.verifyCodeScreen:
         return MaterialPageRoute(builder: (_) => const VerifyCodeScreen());
+      case Routes.resetPasswordScreen:
+        return MaterialPageRoute(builder: (_) => ResetPasswordScreen());
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.chooseScreen:
