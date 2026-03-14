@@ -29,6 +29,7 @@ class ForgetPasswordScreen extends StatelessWidget {
               children: [
                 SizedBox(height: 36.h),
                 LoginTitle(text: 'Forgot your password?\nDon\'t worry '),
+
                 SizedBox(height: 40.h),
                 CustomTextFormField(
                   hint: 'email address',
